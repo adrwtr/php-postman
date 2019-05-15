@@ -16,23 +16,19 @@ teste:adriano
 
 ##json:
 {
-    "dt_operacao": "2019-05-15 14:42:40",
+    "dt_operacao": "2019-05-15 16:04:29",
     "ds_query": "cancelamento",
     "arrMensalidades": [
         {
-            "cd_mensalidade_unimestre": 624263,
+            "cd_mensalidade_unimestre": 8630211,
             "cd_codigo_gateway": 131,
-            "ds_hash_gateway": "123",
+            "ds_hash_gateway": "44852890",
             "vl_valor": 900,
-            "dt_vencimento_recorrencia": "2019-05-13",
-            "ds_situacao_atual": "CANCELADA"
-        },
-        {
-            "cd_mensalidade_unimestre": 624262,
-            "cd_codigo_gateway": 132,
-            "ds_hash_gateway": "123",
-            "vl_valor": 300,
-            "dt_vencimento_recorrencia": "2019-05-13",
+            "dt_vencimento_recorrencia": {
+                "date": "2019-05-13 00:00:00.000000",
+                "timezone_type": 3,
+                "timezone": "America/Sao_Paulo"
+            },
             "ds_situacao_atual": "CANCELADA"
         }
     ]
