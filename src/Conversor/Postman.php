@@ -1,47 +1,11 @@
 <?php
-namespace PhpFlo\Component\Conversor;
+namespace Phppostman\Conversor;
 
-use PhpFlo\Common\ComponentInterface;
-use PhpFlo\Common\ComponentTrait;
-
-class Postman implements ComponentInterface
+class Postman
 {
-    use ComponentTrait;
-
     public function __construct()
     {
-        $this->inPorts()
-            ->add(
-                'ds_informacao',
-                ['datatype' => 'all']
-            );
-
-        $this->outPorts()
-            ->add(
-                'ds_url',
-                ['datatype' => 'string']
-            )
-            ->add(
-                'ds_metodo',
-                ['datatype' => 'string']
-            )
-            ->add(
-                'arrHeaders',
-                ['datatype' => 'array']
-            )
-            ->add(
-                'ds_json',
-                ['datatype' => 'string']
-            );
-
-        $this->inPorts()
-            ->ds_informacao
-            ->on(
-                'data',
-                [$this, 'converter']
-            );
     }
-
 
     public function converter($ds_informacao)
     {
@@ -80,22 +44,12 @@ class Postman implements ComponentInterface
 
         $arrHeaders = $this->processHeaders($ds_headers);
 
-        $this->outPorts()
-            ->ds_url
-            ->send($ds_url);
-
-        $this->outPorts()
-            ->arrHeaders
-            ->send($arrHeaders);
-
-        $this->outPorts()
-            ->ds_json
-            ->send($ds_json);
-
-        $this->outPorts()
-            ->ds_metodo
-            ->send($ds_metodo)
-            ->disconnect();
+        return [
+            'ds_url' => $ds_url,
+            'ds_metodo' => $ds_metodo,
+            'arrHeaders' => $arrHeaders,
+            'ds_json' => $ds_json
+        ];
     }
 
     private function getLinhasIndices($arrLinhas)

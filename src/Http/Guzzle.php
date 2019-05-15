@@ -1,12 +1,9 @@
 <?php
-namespace PhpFlo\Component\Http;
+namespace Phppostman\Http;
 
-use PhpFlo\Common\ComponentInterface;
-use PhpFlo\Common\ComponentTrait;
 
-class Guzzle implements ComponentInterface
+class Guzzle
 {
-    use ComponentTrait;
 
     private $ds_url;
     private $ds_metodo;
@@ -15,54 +12,10 @@ class Guzzle implements ComponentInterface
 
     public function __construct()
     {
-        $this->inPorts()
-            ->add(
-                'ds_url',
-                ['datatype' => 'string']
-            )->add(
-                'arrHeaders',
-                ['datatype' => 'array']
-            )->add(
-                'ds_json',
-                ['datatype' => 'string']
-            )->add(
-                'ds_metodo',
-                ['datatype' => 'string']
-            );
-
-        $this->outPorts()
-            ->add(
-                'ds_json',
-                ['datatype' => 'string']
-            );
-
-        $this->inPorts()
-            ->ds_url
-            ->on(
-                'data',
-                [$this, 'setUrl']
-            );
-
-        $this->inPorts()
-            ->arrHeaders
-            ->on(
-                'data',
-                [$this, 'setArrHeaders']
-            );
-
-        $this->inPorts()
-            ->ds_json
-            ->on(
-                'data',
-                [$this, 'setJson']
-            );
-
-        $this->inPorts()
-            ->ds_metodo
-            ->on(
-                'data',
-                [$this, 'executar']
-            );
+       $this->ds_url = '';
+       $this->ds_metodo = '';
+       $this->arrHeaders = '';
+       $this->ds_json = '';
     }
 
     public function setUrl($ds_valor)
@@ -99,11 +52,8 @@ class Guzzle implements ComponentInterface
 
             $ds_content = $objResponse->getBody()
                 ->getContents();
-          
-            $this->outPorts()
-                ->ds_json
-                ->send($ds_content)
-                ->disconnect();
-        }        
+
+            return $ds_content;
+        }
     }
 }
