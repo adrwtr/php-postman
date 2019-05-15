@@ -1,0 +1,21 @@
+{
+  "name": "php-postman",
+  "description": "Execução de apis como o postman em PHP",
+  "type": "executor",
+  "keywords": ["php", "postman", "guzzle"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Adriano Waltrick",
+      "email": "akuma.majunia@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "guzzlehttp/guzzle": "~6.0"
+  },
+  "autoload": {
+    "psr-4": { "PhpFlo\\Component\\": "src/" }
+  },
+  "config": { "bin-dir": "bin" }
+}
