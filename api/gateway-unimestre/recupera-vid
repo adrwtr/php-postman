@@ -1,3 +1,6 @@
+##descricao:
+Recupera a URL de uma operação no gateway, validando o VID
+
 ##url:
 https://ngeducacional.com.br/projetos/api/index.php?api=vetrol.ApiPlanoPagamento&id_curso=612&nr_registros=10&nr_pagina=1
 

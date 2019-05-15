@@ -6,6 +6,3 @@ Executor de APIs em PHP
 GUZZLE
 
 
-# APIS
-
-http://localhost/api/executor.php?api=gateway-unimestre/recupera-vid
