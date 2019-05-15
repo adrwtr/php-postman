@@ -1,0 +1,32 @@
+##nome:
+api-gateway-cancelar
+
+##descricao:
+Cancela uma mensalidade no GATEWAY
+
+##outras-urls:
+http://localhost/api/gateway/cancelar
+http://gateway.unimestre.com/api/gateway/cancelar
+
+##url:
+https://gateway.unimestre.com/api/gateway/cancelar
+
+##metodo:
+post
+
+##headers:
+Content-Type:application/json
+teste:adriano
+
+##json:
+{
+    "ds_chave_cliente"  : "unimestre-testes",
+    "ds_chave_gateway" : "VINDI",
+    "arrMensalidadesUnimestre" : [
+        8629943,
+        8629944,
+        8629945,
+        8629946,
+        8629947
+    ]
+}

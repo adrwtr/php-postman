@@ -1,3 +1,6 @@
+##nome:
+recupera-vid
+
 ##descricao:
 Recupera a URL de uma operação no gateway, validando o VID
 

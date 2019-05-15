@@ -1,0 +1,94 @@
+##nome:
+webhook-cancelar
+
+##descricao:
+Webhook enviada pela vindi no momento do cancelamento
+
+##outras-urls:
+http://localhost/api/webhook/vindi
+https://gateway.unimestre.com/api/webhook/vindi
+
+##url:
+http://localhost/api/webhook/vindi
+
+##metodo:
+post
+
+##headers:
+Content-Type:application/json
+
+##json:
+{
+    "event": {
+        "type": "bill_canceled",
+        "created_at": "2019-05-15T13:14:41.827-03:00",
+        "data": {
+            "bill": {
+                "id": 44852900,
+                "code": null,
+                "amount": "0.0",
+                "installments": 1,
+                "status": "canceled",
+                "seen_at": null,
+                "billing_at": "2019-12-05T00:00:00.000-02:00",
+                "due_at": null,
+                "url": "https://app.vindi.com.br/customer/bills/44852900?token=afbcd968-a830-4879-9f0a-674b775190eb",
+                "created_at": "2019-05-15T13:13:54.000-03:00",
+                "updated_at": "2019-05-15T13:14:41.809-03:00",
+                "bill_items": [
+                    {
+                        "id": 53488738,
+                        "amount": "149.5",
+                        "quantity": 1,
+                        "pricing_range_id": null,
+                        "description": null,
+                        "pricing_schema": {
+                            "id": 8545928,
+                            "short_format": "R$ 149,49 / unidade",
+                            "price": "149.49",
+                            "minimum_price": "149.5",
+                            "schema_type": "per_unit",
+                            "pricing_ranges": [],
+                            "created_at": "2019-05-15T13:13:54.000-03:00"
+                        },
+                        "product": {
+                            "id": 324639,
+                            "name": "MENSALIDADE",
+                            "code": "1"
+                        },
+                        "product_item": null,
+                        "discount": null
+                    }
+                ],
+                "charges": [],
+                "customer": {
+                    "id": 10174857,
+                    "name": "Cleyton Magalhães Dimas",
+                    "email": "",
+                    "code": "268"
+                },
+                "period": null,
+                "subscription": null,
+                "metadata": {},
+                "payment_profile": {
+                    "id": 12068519,
+                    "holder_name": "CLEYTON MAGALHAES DIMAS",
+                    "registry_code": null,
+                    "bank_branch": null,
+                    "bank_account": null,
+                    "card_expiration": "2020-01-31T23:59:59.000-02:00",
+                    "card_number_first_six": "555555",
+                    "card_number_last_four": "5557",
+                    "token": "c00eef49-1ec0-4562-a406-c8b5710497ee",
+                    "created_at": "2019-05-15T13:13:54.000-03:00",
+                    "payment_company": {
+                        "id": 1,
+                        "name": "MasterCard",
+                        "code": "mastercard"
+                    }
+                },
+                "payment_condition": null
+            }
+        }
+    }
+}
