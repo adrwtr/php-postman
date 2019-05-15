@@ -1,5 +1,5 @@
 ##nome:
-ApiUnimestreGatewayWebhook
+webhook-pagamento
 
 ##descricao:
 Simulação do envio de comunicação de um pagamento entre o GATEWAY e o UNIMESTRE

@@ -24,7 +24,7 @@ Content-Type:application/json
         "created_at": "2019-05-15T13:14:41.827-03:00",
         "data": {
             "bill": {
-                "id": 4444,
+                "id": 123,
                 "code": null,
                 "amount": "0.0",
                 "installments": 1,
