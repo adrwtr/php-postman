@@ -1,0 +1,27 @@
+##descricao:
+Simulação do envio de comunicação de um pagamento entre o GATEWAY e o UNIMESTRE
+
+##url:
+http://localhost/correcoes/projetos/api/index.php?api=ApiUnimestreGatewayWebhook
+
+##metodo:
+post
+
+##headers:
+Content-Type:application/json
+
+##json:
+{
+    "dt_operacao": "2019-05-15 12:57:44",
+    "ds_query": "pagamento",
+    "arrMensalidades": [
+        {
+            "cd_mensalidade_unimestre": 8629942,
+            "cd_codigo_gateway": 6441,
+            "ds_hash_gateway": null,
+            "vl_valor": 149.5,
+            "dt_vencimento_recorrencia": "",
+            "ds_situacao_atual": "ABERTA"
+        }
+    ]
+}
