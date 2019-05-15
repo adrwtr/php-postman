@@ -60,18 +60,25 @@ class Guzzle
             $objGuzzleClient = new \GuzzleHttp\Client(
                 [
                     'headers' => $this->arrHeaders,
-                     'json' => \GuzzleHttp\json_decode($this->ds_json)
+                    'json' => \GuzzleHttp\json_decode($this->ds_json),
+                    'http_errors' => false
                 ]
             );
 
             /// $objGuzzleClient->setBody(json_encode($this->ds_json));
+            try {
+                $objResponse = $objGuzzleClient->post(
+                    $this->ds_url
+                );
 
-            $objResponse = $objGuzzleClient->post(
-                $this->ds_url
-            );
+                $ds_content = $objResponse->getBody()
+                    ->getContents();
+            } catch (\GuzzleHttp\Exception\ClientException $e) {
+                return ($e->getResponse()->getBody()->getContents());
+            } catch (\Exception $objErro) {
+                return $objErro->getMessage(); //  . '<HR>' . $objResponse->getBody();
+            }
 
-            $ds_content = $objResponse->getBody()
-                ->getContents();
 
             return $ds_content;
         }
