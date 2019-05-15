@@ -19,11 +19,11 @@ http://localhost/pm/executor.php?api=gateway-unimestre/api-gateway-cancelar
 
 # GATEWAY > UNIMESTRE
 
-# enviado para o unimestre - para avisar alguma movimentação no webhook
+# enviado para o unimestre - para avisar alguma movimentação de pagamento no webhook
 http://localhost/pm/executor.php?api=unimestre/gateway/webhook-pagamento
 
-# enviado para o unimestre - para avisar alguma movimentação no webhook
-http://localhost/pm/executor.php?api=unimestre/gateway/webhook-pagamento
+# enviado para o unimestre - para avisar alguma movimentação de cancelamento no webhook
+http://localhost/pm/executor.php?api=unimestre/gateway/webhook-cancelamento
 
 # VINDI > Gateway
 
