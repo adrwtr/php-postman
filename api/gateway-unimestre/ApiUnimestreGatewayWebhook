@@ -9,6 +9,7 @@ post
 
 ##headers:
 Content-Type:application/json
+teste:adriano
 
 ##json:
 {
@@ -21,7 +22,7 @@ Content-Type:application/json
             "ds_hash_gateway": null,
             "vl_valor": 149.5,
             "dt_vencimento_recorrencia": "",
-            "ds_situacao_atual": "ABERTA"
+            "ds_situacao_atual": "PAGA"
         }
     ]
 }

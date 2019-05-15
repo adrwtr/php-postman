@@ -38,14 +38,14 @@ class Guzzle
 
     public function executar($ds_metodo)
     {
-        $objGuzzleClient = new \GuzzleHttp\Client(
-            [
-                'headers' => $this->arrHeaders,
-                'json' => $this->ds_json,
-            ]
-        );
-
         if ($ds_metodo == 'get') {
+            $objGuzzleClient = new \GuzzleHttp\Client(
+                [
+                    'headers' => $this->arrHeaders,
+                    'json' => $this->ds_json,
+                ]
+            );
+
             $objResponse = $objGuzzleClient->get(
                 $this->ds_url
             );
@@ -55,5 +55,27 @@ class Guzzle
 
             return $ds_content;
         }
+
+        if ($ds_metodo == 'post') {
+            $objGuzzleClient = new \GuzzleHttp\Client(
+                [
+                    'headers' => $this->arrHeaders,
+                     'json' => \GuzzleHttp\json_decode($this->ds_json)
+                ]
+            );
+
+            /// $objGuzzleClient->setBody(json_encode($this->ds_json));
+
+            $objResponse = $objGuzzleClient->post(
+                $this->ds_url
+            );
+
+            $ds_content = $objResponse->getBody()
+                ->getContents();
+
+            return $ds_content;
+        }
+
+        return 'sem-resposta';
     }
 }
