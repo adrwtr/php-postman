@@ -5,7 +5,8 @@ recupera-vid
 Recupera a URL de uma operação no gateway, validando o VID
 
 ##url:
-https://ngeducacional.com.br/projetos/api/index.php?api=vetrol.ApiPlanoPagamento&id_curso=612&nr_registros=10&nr_pagina=1
+http://localhost/api/gateway/vid/34
+
 
 ##metodo:
 get
@@ -16,6 +17,6 @@ Authorization:UNIMESTRE wuqegITIWO4Avu2u752OvACikawadI
 
 ##json:
 {
-    "ds_chave_cliente" : "CLIENTE-ESCOLA",
-    "ds_api_auth" : "cliente-escola"
+    "ds_chave_cliente" : "unimestre-testes",
+    "ds_api_auth" : "unimestre-testes-auth"
 }
