@@ -14,6 +14,9 @@ GUZZLE
     - posta para gateway para saber qual o vid de uma fatura
     http://localhost/pm/executor.php?api=gateway-unimestre/recupera-vid
 
+    - posta para gateway criar o formulario de pagamento
+    http://localhost/pm/executor.php?api=gateway-unimestre/api-gateway-pagar
+
     - enviado para gateway para cancelar mensalidades
     http://localhost/pm/executor.php?api=gateway-unimestre/api-gateway-cancelar
 
