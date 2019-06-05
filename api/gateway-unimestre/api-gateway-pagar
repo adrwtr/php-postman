@@ -9,7 +9,7 @@ http://localhost/api/gateway/formulario
 http://gateway.unimestre.com/api/gateway/formulario
 
 ##url:
-http://localhost/api/gateway/formulario
+http://localhost:8000/api/gateway/formulario
 
 ##metodo:
 post
@@ -22,7 +22,7 @@ target:local-adriano
 {
   "ds_chave_cliente": "unimestre-testes",
   "ds_chave_gateway": "VINDI",
-  "vl_valor": 0,
+  "vl_valor": 300,
   "cd_pessoa_origem": "1001",
   "sn_recorrencia": 1,
   "cd_mensalidade_unimestre": "",
@@ -39,15 +39,27 @@ target:local-adriano
   "arrFaturaItens": [
     {
       "cd_mensalidade_unimestre": "12341",
-      "vl_valor": 100,
+      "vl_valor": 10,
+      "ds_nome": "mensalidade",
+      "dt_vencimento_origem": "2019-04-01"
+    },
+    {
+      "cd_mensalidade_unimestre": "12342",
+      "vl_valor": 10,
+      "ds_nome": "mensalidade",
+      "dt_vencimento_origem": "2019-05-04"
+    },
+    {
+      "cd_mensalidade_unimestre": "12342",
+      "vl_valor": 80,
       "ds_nome": "mensalidade",
       "dt_vencimento_origem": "2019-06-01"
     },
     {
       "cd_mensalidade_unimestre": "12342",
-      "vl_valor": 100,
+      "vl_valor": 101,
       "ds_nome": "mensalidade",
-      "dt_vencimento_origem": "2019-07-01"
+      "dt_vencimento_origem": "2019-07-10"
     }
   ]
 }
