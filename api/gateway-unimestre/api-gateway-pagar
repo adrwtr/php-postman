@@ -6,7 +6,7 @@ Cria ou altera uma operação. Pode criar um novo usuário e ao final retorna o 
 
 ##outras-urls:
 http://localhost/api/gateway/formulario
-http://gateway.unimestre.com/api/gateway/formulario
+https://gateway.unimestre.com/api/gateway/formulario
 
 ##url:
 http://localhost:8000/api/gateway/formulario
@@ -22,10 +22,10 @@ target:local-adriano
 {
   "ds_chave_cliente": "unimestre-testes",
   "ds_chave_gateway": "VINDI",
-  "vl_valor": 300,
+  "vl_valor": 60,
   "cd_pessoa_origem": "1001",
   "sn_recorrencia": 1,
-  "cd_mensalidade_unimestre": "",
+  "cd_mensalidade_unimestre": "123",
   "ds_nome": "Adriano",
   "ds_cep": "89051200",
   "ds_estado": "SC",
@@ -39,27 +39,28 @@ target:local-adriano
   "arrFaturaItens": [
     {
       "cd_mensalidade_unimestre": "12341",
-      "vl_valor": 10,
+      "vl_valor": 30,
       "ds_nome": "mensalidade",
-      "dt_vencimento_origem": "2019-04-01"
+      "dt_vencimento_origem": "2019-07-20"
     },
     {
       "cd_mensalidade_unimestre": "12342",
-      "vl_valor": 10,
+      "vl_valor": 30,
       "ds_nome": "mensalidade",
-      "dt_vencimento_origem": "2019-05-04"
+      "dt_vencimento_origem": "2019-07-21"
     },
     {
-      "cd_mensalidade_unimestre": "12342",
-      "vl_valor": 80,
+      "cd_mensalidade_unimestre": "12343",
+      "vl_valor": 60,
       "ds_nome": "mensalidade",
-      "dt_vencimento_origem": "2019-06-01"
+      "dt_vencimento_origem": "2019-08-05"
     },
     {
-      "cd_mensalidade_unimestre": "12342",
-      "vl_valor": 101,
+      "cd_mensalidade_unimestre": "12344",
+      "vl_valor": 60,
       "ds_nome": "mensalidade",
-      "dt_vencimento_origem": "2019-07-10"
+      "dt_vencimento_origem": "2019-09-05"
     }
+
   ]
 }

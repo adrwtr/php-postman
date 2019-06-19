@@ -16,6 +16,10 @@ GUZZLE
 
     - posta para gateway criar o formulario de pagamento
     http://localhost/pm/executor.php?api=gateway-unimestre/api-gateway-pagar
+    http://localhost/pm/executor.php?api=gateway-unimestre/teste-gateway-pagar/1-fatura-simples
+    http://localhost/pm/executor.php?api=gateway-unimestre/teste-gateway-pagar/2-fatura-dupla
+    http://localhost/pm/executor.php?api=gateway-unimestre/teste-gateway-pagar/3-recorrencia-programada
+    http://localhost/pm/executor.php?api=gateway-unimestre/teste-gateway-pagar/4-recorrencia-assinatura-mensal
 
     - enviado para gateway para cancelar mensalidades
     http://localhost/pm/executor.php?api=gateway-unimestre/api-gateway-cancelar
